@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     font-family: 'Press Start 2P', cursive !important;
-    background-color:#24282F;
-    min-height:100vh;
     color:#FFF;
+    background-image: url('/assets/background.jpg');
+    background-position: center;
+    background-size:100%;
+    min-height:100vh;
+    color:#000;
 `;
 
 export const Map = styled.div`

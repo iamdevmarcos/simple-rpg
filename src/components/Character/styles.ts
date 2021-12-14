@@ -11,7 +11,7 @@ export const Container = styled.div<{size:number; left: number; top:number; side
 `;
 
 export const NameBox = styled.div`
-    background-color: #000;
+    background-color: #EDF2F7;
     padding: 5px;
     border-radius: 5px;
     position: absolute;
