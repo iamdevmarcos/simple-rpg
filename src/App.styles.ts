@@ -13,3 +13,12 @@ export const Map = styled.div`
     background-position: left top;
     background-size:100%;
 `;
+
+export const Start = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size:30px;
+`;
