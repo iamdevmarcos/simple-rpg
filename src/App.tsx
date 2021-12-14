@@ -13,31 +13,31 @@ const App = () => {
 
   const handleKeyDown = (e: KeyboardEvent) => {
     switch(e.code) {
-      case 'KeyA':
-      case 'ArrowLeft':
+        case 'KeyA':
+        case 'ArrowLeft':
         character.moveLeft();
-      break;
+        break;
 
-      case 'KeyW':
-      case 'ArrowUp':
+        case 'KeyW':
+        case 'ArrowUp':
         character.moveUp();
-      break;
+        break;
 
-      case 'KeyD':
-      case 'ArrowRight':
+        case 'KeyD':
+        case 'ArrowRight':
         character.moveRight();
-      break;
+        break;
 
-      case 'KeyS':
-      case 'ArrowDown':
+        case 'KeyS':
+        case 'ArrowDown':
         character.moveDown();
-      break;
+        break;
 
-      case 'Enter':
+        case 'Enter':
         setStart(true);
-      break;
+        break;
     }
-  }
+}
 
   return(
     <C.Container>
