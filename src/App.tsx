@@ -37,7 +37,7 @@ const App = () => {
         setStart(true);
         break;
     }
-}
+  }
 
   return(
     <C.Container>
