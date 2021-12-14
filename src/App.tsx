@@ -42,7 +42,11 @@ const App = () => {
   return(
     <C.Container>
       {!start &&
-        <C.Start>Press Enter to start game</C.Start>
+        <C.Start>
+          Press
+          <C.Key onClick={e=>setStart(true)}>Enter</C.Key>
+          to start game
+        </C.Start>
       }
       
       {start &&

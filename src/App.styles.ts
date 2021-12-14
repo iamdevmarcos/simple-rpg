@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    font-family: 'Press Start 2P', cursive !important;
     background-color:#24282F;
     min-height:100vh;
     color:#FFF;
@@ -18,7 +19,30 @@ export const Start = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 100vh;
-    font-size:30px;
+    font-size:20px;
+`;
+
+export const Key = styled.div`
+    font-family: Consolas !important;
+    background-color:#EDF2F7;
+    border-radius: 5px;
+    border-bottom: 3px solid #CCC;
+    border-bottom-width:3px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    padding:5px;
+    padding-inline: 0.6em;
+    white-space: nowrap;
+    margin:0px 10px;
+    transition: all ease 0.2s;
+    color:#000;
+
+    &&:hover {
+        background-color:#CCC;
+        border-bottom-width:1px;
+        cursor:pointer;
+    }
 `;

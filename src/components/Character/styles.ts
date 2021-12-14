@@ -12,10 +12,10 @@ export const Container = styled.div<{size:number; left: number; top:number; side
 
 export const NameBox = styled.div`
     background-color: #000;
-    padding: 3px;
+    padding: 5px;
     border-radius: 5px;
     position: absolute;
     font-size: 10px;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -25px;
 `;
