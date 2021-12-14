@@ -13,6 +13,7 @@ export const useCharacter = () => {
         }));
         setSide('left');
     }
+
     const moveRight = () => {
         setPos(pos => ({
             x: canMove(pos.x + 1, pos.y) ? pos.x + 1 : pos.x,
@@ -20,6 +21,7 @@ export const useCharacter = () => {
         }));
         setSide('right');
     }
+
     const moveDown = () => {
         setPos(pos => ({
             x: pos.x,
@@ -27,6 +29,7 @@ export const useCharacter = () => {
         }));
         setSide('down');
     }
+
     const moveUp = () => {
         setPos(pos => ({
             x: pos.x,
@@ -36,9 +39,10 @@ export const useCharacter = () => {
     }
 
     function canMove(x: number, y: number) {
-        if(mapSpots[y] !== undefined && mapSpots[y][x] !== undefined) {
-            return (mapSpots[y][x] === 1);
+        if(mapSpots[y] !== undefined && mapSpots[y][x] === 1) {
+            return true;
         }
+
         return false;
     }
 
