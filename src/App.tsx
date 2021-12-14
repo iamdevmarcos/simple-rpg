@@ -4,7 +4,7 @@ import { Character } from './components/Character';
 import { useCharacter } from './hooks/useCharacter';
 
 const App = () => {
-  const character = useCharacter();
+  const character = useCharacter("Marcos");
   const [start, setStart] = useState(false);
 
   useEffect(() => {
@@ -47,8 +47,7 @@ const App = () => {
       
       {start &&
         <C.Map>
-          <Character x={5} y={2} side={'down'} />
-          <Character x={character.x} y={character.y} side={character.side} />
+          <Character x={character.x} y={character.y} side={character.side} name={character.name} />
         </C.Map>
       }
     </C.Container>
