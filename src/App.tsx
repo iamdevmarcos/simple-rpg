@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as C from './App.styles';
-import { BgAudio as BgMusic } from './components/BgAudio';
+import { BgAudio } from './components/BgAudio';
 import { Character } from './components/Character';
 import { useCharacter } from './hooks/useCharacter';
 
@@ -42,6 +42,8 @@ const App = () => {
 
   return(
     <C.Container>
+      <BgAudio />
+      
       {!start &&
         <C.Start>
           Press
@@ -52,8 +54,6 @@ const App = () => {
       
       {start &&
         <>
-          <BgMusic />
-
           <C.Map>
             <Character x={character.x} y={character.y} side={character.side} name={character.name} />
           </C.Map>

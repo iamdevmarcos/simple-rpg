@@ -5,8 +5,8 @@ export const BgAudio = () => {
     return (
         <C.Container>
             <ReactAudioPlayer
-                src="/sounds/bgmusic.mp3"
-                autoPlay
+                src="/sounds/loading.mp3"
+                autoPlay={true}
             />
         </C.Container>
     );
