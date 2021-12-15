@@ -7,6 +7,7 @@ import { useCharacter } from './hooks/useCharacter';
 const App = () => {
   const character = useCharacter("Marcos");
   const [start, setStart] = useState(false);
+  const [bgAudio, setBgAudio] = useState(true);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -42,8 +43,6 @@ const App = () => {
 
   return(
     <C.Container>
-      <BgAudio />
-      
       {!start &&
         <C.Start>
           Press
@@ -54,6 +53,8 @@ const App = () => {
       
       {start &&
         <>
+          <BgAudio />
+
           <C.Map>
             <Character x={character.x} y={character.y} side={character.side} name={character.name} />
           </C.Map>
