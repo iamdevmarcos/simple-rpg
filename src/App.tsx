@@ -9,7 +9,7 @@ const App = () => {
   const character = useCharacter("Marcos");
   const [playerName, setPlayerName] = useState('');
   const [start, setStart] = useState(false);
-  const character2 = useCharacter(playerName);
+  const character2 = useCharacter("Player2");
   
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -18,6 +18,7 @@ const App = () => {
   const definePlayerName = (playerName: string) => {
     setPlayerName(playerName);
   }
+
 
   const handleKeyDown = (e: KeyboardEvent) => {
     switch(e.code) {
@@ -42,7 +43,7 @@ const App = () => {
         break;
 
         case 'Enter':
-        setStart(true);
+          setStart(true);
         break;
     }
   }
@@ -69,7 +70,12 @@ const App = () => {
             <>
               <C.Map>
                 <Character x={3} y={5} side={character.side} name={character.name} />
-                <Character x={character2.x} y={character2.y} side={character2.side} name={character2.name} />
+                <Character
+                  x={character2.x}
+                  y={character2.y} 
+                  side={character2.side}
+                  name={character2.name}
+                />
               </C.Map>
             </>
           }
