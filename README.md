@@ -1,4 +1,4 @@
-# devideas-nodets
+# simple-rpg-reactjs
 > a simple rpg minigame with React.JS <3
 
 <img src="./public/assets/Project.gif" alt="gif">
@@ -7,7 +7,6 @@
 
 * **Front-End:** [React.js](https://reactjs.org/)
 * **Typing:** [Typescript](https://www.typescriptlang.org/)
-* **Deployment:** [Vercel](https://vercel.com/dashboard)
 
 ## Running locally
 
