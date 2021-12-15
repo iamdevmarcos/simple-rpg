@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import * as C from './App.styles';
 import { BgAudio } from './components/BgAudio';
+import { PlayerName } from './components/PlayerName';
 import { Character } from './components/Character';
 import { useCharacter } from './hooks/useCharacter';
 
 const App = () => {
   const character = useCharacter("Marcos");
+  const [playerName, setPlayerName] = useState('');
   const [start, setStart] = useState(false);
 
   useEffect(() => {
@@ -52,11 +54,19 @@ const App = () => {
       
       {start &&
         <>
-          <BgAudio />
+          {!playerName &&
+            <PlayerName />
+          }
 
-          <C.Map>
-            <Character x={character.x} y={character.y} side={character.side} name={character.name} />
-          </C.Map>
+          {playerName &&
+            <>
+              <BgAudio />
+    
+              <C.Map>
+                <Character x={character.x} y={character.y} side={character.side} name={character.name} />
+              </C.Map>
+            </>
+          }
         </>
       }
     </C.Container>
