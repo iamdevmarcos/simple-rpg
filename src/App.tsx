@@ -7,7 +7,6 @@ import { useCharacter } from './hooks/useCharacter';
 const App = () => {
   const character = useCharacter("Marcos");
   const [start, setStart] = useState(false);
-  const [bgAudio, setBgAudio] = useState(true);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
