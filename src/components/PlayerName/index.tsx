@@ -2,7 +2,11 @@ import { useState, ChangeEvent, KeyboardEvent } from 'react';
 import * as C from './styles';
 import { FirstLetterUp } from '../../utils/FirstLetterUp';
 
-export const PlayerName = () => {
+type Props = {
+    onChange: (playerName: string) => void
+}
+
+export const PlayerName = ({ onChange }: Props) => {
     const [name, setName] = useState("");
 
     const handlePlayerName = (e: ChangeEvent<HTMLInputElement>) => {
@@ -14,7 +18,7 @@ export const PlayerName = () => {
         switch(e.code) {
             case 'Enter':
             case 'NumpadEnter':
-                (name.length > 3) ? console.log(FirstLetterUp(name)) : alert("Nome muito curto");
+                (name.length > 3) ? onChange(FirstLetterUp(name)) : alert("this name is too short");
             break;
         }
     }

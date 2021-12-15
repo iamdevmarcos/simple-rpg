@@ -14,6 +14,11 @@ const App = () => {
     window.addEventListener('keydown', handleKeyDown);
   }, []);
 
+  const definePlayerName = (playerName: string) => {
+    setPlayerName(playerName);
+    console.log(playerName);
+  }
+
   const handleKeyDown = (e: KeyboardEvent) => {
     switch(e.code) {
         case 'KeyA':
@@ -54,14 +59,14 @@ const App = () => {
       
       {start &&
         <>
+          <BgAudio />
+
           {!playerName &&
-            <PlayerName />
+            <PlayerName onChange={definePlayerName} />
           }
 
-          {playerName &&
+          {playerName && playerName !== '' &&
             <>
-              <BgAudio />
-    
               <C.Map>
                 <Character x={character.x} y={character.y} side={character.side} name={character.name} />
               </C.Map>
