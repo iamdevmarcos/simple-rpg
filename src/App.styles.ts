@@ -24,7 +24,7 @@ export const Start = styled.div`
     justify-content:center;
     flex-direction: row;
     min-height: 100vh;
-    font-size:20px;
+    font-size:30px;
 `;
 
 export const Key = styled.div`
@@ -33,19 +33,43 @@ export const Key = styled.div`
     border-radius: 5px;
     border-bottom: 3px solid #CCC;
     border-bottom-width:3px;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: bold;
     line-height: normal;
     padding:5px;
     padding-inline: 0.6em;
     white-space: nowrap;
-    margin:0px 10px;
     transition: all ease 0.2s;
     color:#000;
+    margin:0px 10px;
+	animation-name: heart;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
 
     &&:hover {
         background-color:#CCC;
         border-bottom-width:1px;
         cursor:pointer;
+    }
+
+    @keyframes heart {
+        0% {
+            margin-top: 0px;
+        }
+        25% {
+            margin-top: -5px;
+        }
+        30% {
+            margin-top: 0px;
+        }
+        40% {
+            margin-top: -3px;
+        }
+        50% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: 0px;
+        }
     }
 `;

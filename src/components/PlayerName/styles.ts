@@ -16,6 +16,7 @@ export const Container = styled.div`
         border-bottom:5px solid #000;
         color:#FFF !important;
         flex:1;
+        text-align:center;
         padding:5px;
         font-size:25px;
     }
